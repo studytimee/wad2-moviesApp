@@ -56,16 +56,18 @@ export default function MovieCard({ movie, action }) {
     <Card className={classes.card}>
       <CardHeader
         className={classes.header}
+        // avatar = {
+        // movie.favourite ? (
+        //   <Avatar className={classes.avatar}>
+        //     <FavoriteIcon />
+        //   </Avatar>
+        // ) : null
+        // }
         avatar={
           <Avatar className={classes.avatar}>
             {renderAvatar()}
           </Avatar>
-          // movie.favourite ? (
-          //   <Avatar className={classes.avatar}>
-          //     <FavoriteIcon />
-          //   </Avatar>
-          // ) : null
-        }
+         }
         title={
           <Typography variant="h5" component="p">
             {movie.title}{" "}
