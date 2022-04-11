@@ -26,7 +26,7 @@ const genreFiltering = {
 
 const TopRatedMovies = (props) => {
   // Used react-query for caching the movies data in the browser
-  const { data, error, isLoading, isError } = useQuery("discover", getTopRatedMovies);
+  const { data, error, isLoading, isError } = useQuery("top-rated", getTopRatedMovies);
   const { filterValues, setFilterValues, filterFunction } = useFiltering(
     [],
     [titleFiltering, genreFiltering]
