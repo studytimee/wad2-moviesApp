@@ -5,7 +5,7 @@ export const MoviesContext = React.createContext(null);
 const MoviesContextProvider = (props) => {
   const [myReviews, setMyReviews] = useState({})
   const [favourites, setFavourites] = useState([]);
-  const [watchLists, setWatchList] = useState([]);
+  const [watchLists, setWatchLists] = useState([]);
 
   const addToFavourites = (movie) => {
     let updatedFavourites = [...favourites];
@@ -20,12 +20,18 @@ const MoviesContextProvider = (props) => {
     if (!watchLists.includes(movie.id)) {
       updatedWatchLists.push(movie.id);
     }
-    setWatchList(updatedWatchLists);
+    setWatchLists(updatedWatchLists);
   };
 
   // We will use this function in a later section
   const removeFromFavourites = (movie) => {
     setFavourites(favourites.filter((mId) => mId !== movie.id));
+    console.log(`inside remove favourites${favourites}`);
+  };
+
+  const removeFromWatchList = (movie) => {
+    setWatchLists(watchLists.filter((mId) => mId !== movie.id));
+    console.log(`remove watchlist ${watchLists}`)
   };
 
   const addReview = (movie, review) => {
@@ -41,6 +47,7 @@ const MoviesContextProvider = (props) => {
         addReview,
         watchLists,
         addToWatchLists,
+        removeFromWatchList,
       }}
     >
       {props.children}
