@@ -12,6 +12,7 @@ import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
 import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: { maxWidth: 345 },
@@ -52,9 +53,11 @@ export default function CelebrityCard(props) {
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="outlined" size="medium" color="primary">
-          Detail
-        </Button>
+        <Link to={`/actors/${celebrity.id}`}>
+          <Button variant="outlined" size="medium" color="primary">
+            Detail
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );
