@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   }
 });
 
-const SignupPage = props =>  {
+const SignupPage = props => {
   const classes = useStyles();
   const context = useContext(AuthContext)
   const [email, setEmail] = useState("");
@@ -53,12 +53,12 @@ const SignupPage = props =>  {
           <input value={lastName} placeholder="last name" onChange={e => {
             setLastName(e.target.value);
           }} className={classes.form} /><br />
-          <input value={lastName} placeholder="last name" onChange={e => {
+          <input type="password" value={password} placeholder="password" onChange={e => {
             setPassword(e.target.value);
           }} className={classes.form} /><br />
-          <input value={lastName} placeholder="last name" onChange={e => {
+          <input type="password" value={passwordAgain} placeholder="password again" onChange={e => {
             setPasswordAgain(e.target.value);
-          }} className={classes.form} /><br />          
+          }} className={classes.form} /><br />
           <button type="submit" className={classes.form}>Sign Up</button>
           <button type="reset" className={classes.form}>Reset</button>
         </form>
