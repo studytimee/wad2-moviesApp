@@ -16,6 +16,10 @@ import TopRatedMoviesPage from "./pages/topRatedMoviesPage"; // NEW
 import NowPlayingMoviesPage from "./pages/nowPlayingMoviesPage"; // NEW
 import CelebritiesHomePage from "./pages/celebritiesHomePage"; // NEW
 import CelebrityDetailsPage from "./pages/celebrityDetailsPage"; // NEW
+import LoginPage from "./pages/loginPage";
+import SignUpPage from "./pages/signUpPage";
+
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,6 +38,8 @@ const App = () => {
         <SiteHeader />
         <MoviesContextProvider>
           <Switch>
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/signup" component={SignUpPage} />
             <Route path="/actors/home" component={CelebritiesHomePage} />
             <Route path="/actors/:id" component={CelebrityDetailsPage} />
             <Route exact path="/movies/now-playing" component={NowPlayingMoviesPage} />
