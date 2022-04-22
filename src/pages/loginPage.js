@@ -3,7 +3,7 @@ import { AuthContext } from '../contexts/authContext';
 import { MoviesContext } from '../contexts/moviesContext';
 import { makeStyles } from "@material-ui/core/styles";
 import { Redirect } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   form: {
     margin: 20,
@@ -20,7 +20,7 @@ const LoginPage = props => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
 
   const { from } = props.location.state || { from: { pathname: "/" } };
 
@@ -29,11 +29,11 @@ const LoginPage = props => {
     return <Redirect to={from} />;
   }
 
-  
-  const loginSubmit =  () => {
+
+  const loginSubmit = () => {
     context.authenticate(email, password);
   };
-  
+
   return (
     <>
       <center>
@@ -47,6 +47,8 @@ const LoginPage = props => {
           <button type="submit" className={classes.form}>Log in</button>
           <button type="reset" className={classes.form}>Reset</button>
         </form>
+        <p>Not Registered?
+          <Link to="/signup"> Sign Up!</Link></p>
       </center>
     </>
   )

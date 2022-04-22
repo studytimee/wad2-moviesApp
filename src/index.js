@@ -1,6 +1,6 @@
 import SiteHeader from './components/siteHeader'
 import MovieReviewPage from "./pages/movieReviewPage";
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import HomePage from "./pages/homePage";
@@ -19,7 +19,7 @@ import CelebrityDetailsPage from "./pages/celebrityDetailsPage"; // NEW
 import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./privateRoute/privateRoute";
-
+import AuthContext from "./contexts/authContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,28 +35,32 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <ul>
-          <li>
-            <Link to="/">HomePage</Link>
-          </li>
-        </ul>
         <MoviesContextProvider>
-          <Switch>
-            <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/signup" component={SignUpPage} />
-            <Route path="/actors/home" component={CelebritiesHomePage} />
-            <Route path="/actors/:id" component={CelebrityDetailsPage} />
-            <Route exact path="/movies/now-playing" component={NowPlayingMoviesPage} />
-            <Route exact path="/movies/top-rated" component={TopRatedMoviesPage} />
-            <Route exact path="/movies/watchList" component={WatchListPage} />
-            <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-            <Route exact path="/movies/upcoming" component={UpComingMoviesPage} />
-            <Route path="/reviews/:id" component={MovieReviewPage} />
-            <Route exact path="/movies/favourites" component={FavouriteMoviesPage} />
-            <Route path="/movies/:id" component={MoviePage} />
-            <Route exact path="/" component={HomePage} />
-            <Redirect from="*" to="/" />
-          </Switch>
+          <Suspense fallback={<h1>Loading page</h1>}>
+            <AuthContext>
+              <ul>
+                <li>
+                  <Link to="/">HomePage</Link>
+                </li>
+              </ul>
+              <Switch>
+                <Route exact path="/login" component={LoginPage} />
+                <Route exact path="/signup" component={SignUpPage} />
+                <Route path="/actors/home" component={CelebritiesHomePage} />
+                <Route path="/actors/:id" component={CelebrityDetailsPage} />
+                <Route exact path="/movies/now-playing" component={NowPlayingMoviesPage} />
+                <Route exact path="/movies/top-rated" component={TopRatedMoviesPage} />
+                <Route exact path="/movies/watchList" component={WatchListPage} />
+                <Route exact path="/reviews/form" component={AddMovieReviewPage} />
+                <Route exact path="/movies/upcoming" component={UpComingMoviesPage} />
+                <Route path="/reviews/:id" component={MovieReviewPage} />
+                <Route exact path="/movies/favourites" component={FavouriteMoviesPage} />
+                <Route path="/movies/:id" component={MoviePage} />
+                <PrivateRoute exact path="/" component={HomePage} />
+                <Redirect from="*" to="/" />
+              </Switch>
+            </AuthContext>
+          </Suspense>
         </MoviesContextProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
