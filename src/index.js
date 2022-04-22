@@ -18,7 +18,7 @@ import CelebritiesHomePage from "./pages/celebritiesHomePage"; // NEW
 import CelebrityDetailsPage from "./pages/celebrityDetailsPage"; // NEW
 import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/signUpPage";
-
+import PrivateRoute from "./privateRoute/privateRoute";
 
 
 const queryClient = new QueryClient({
@@ -35,7 +35,11 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <SiteHeader />
+        <ul>
+          <li>
+            <Link to="/">HomePage</Link>
+          </li>
+        </ul>
         <MoviesContextProvider>
           <Switch>
             <Route exact path="/login" component={LoginPage} />
