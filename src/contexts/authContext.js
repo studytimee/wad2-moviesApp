@@ -18,9 +18,9 @@ const AuthContextProvider = (props) => {
   const authenticate = async (email, password) => {
     const result = await login(email, password);
     if (result.token) {
+      console.log("Inside authenticate: security token saved in result");
       setToken(result.token)
       setIsAuthenticated(true);
-      console.log(`Inside authContext Check isauthentication? ${isAuthenticated}`);
       setEmail(email);
     }
   };
