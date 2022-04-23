@@ -20,7 +20,7 @@ import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./privateRoute/privateRoute";
 import AuthContext from "./contexts/authContext";
-import AuthHeader from "./authHeader";
+import AuthHeader from "./contexts/authHeader";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,9 +36,11 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+      
         <MoviesContextProvider>
           <Suspense fallback={<h1>Loading page</h1>}>
             <AuthContext>
+              <SiteHeader/>
               <AuthHeader />
               <Switch>
                 <Route exact path="/login" component={LoginPage} />
@@ -47,13 +49,13 @@ const App = () => {
                 <Route path="/actors/:id" component={CelebrityDetailsPage} />
                 <Route exact path="/movies/now-playing" component={NowPlayingMoviesPage} />
                 <Route exact path="/movies/top-rated" component={TopRatedMoviesPage} />
-                <Route exact path="/movies/watchList" component={WatchListPage} />
+                <PrivateRoute exact path="/movies/watchList" component={WatchListPage} />
                 <Route exact path="/reviews/form" component={AddMovieReviewPage} />
                 <Route exact path="/movies/upcoming" component={UpComingMoviesPage} />
                 <Route path="/reviews/:id" component={MovieReviewPage} />
-                <Route exact path="/movies/favourites" component={FavouriteMoviesPage} />
+                <PrivateRoute exact path="/movies/favourites" component={FavouriteMoviesPage} />
                 <Route path="/movies/:id" component={MoviePage} />
-                <PrivateRoute exact path="/" component={HomePage} />
+                <Route exact path="/" component={HomePage} />
                 <Redirect from="*" to="/" />
               </Switch>
             </AuthContext>
