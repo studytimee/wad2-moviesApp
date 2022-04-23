@@ -20,6 +20,7 @@ import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./privateRoute/privateRoute";
 import AuthContext from "./contexts/authContext";
+import AuthHeader from "./authHeader";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -38,11 +39,7 @@ const App = () => {
         <MoviesContextProvider>
           <Suspense fallback={<h1>Loading page</h1>}>
             <AuthContext>
-              <ul>
-                <li>
-                  <Link to="/">HomePage</Link>
-                </li>
-              </ul>
+              <AuthHeader />
               <Switch>
                 <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/signup" component={SignUpPage} />
