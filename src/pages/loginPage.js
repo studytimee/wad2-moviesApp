@@ -17,7 +17,7 @@ const LoginPage = props => {
   const login = () => {
     console.log("call login authenticate");
     context.authenticate(email, password);
-    
+
   };
 
   // Set 'from' to path where browser is redirected after a successful login.
@@ -34,18 +34,20 @@ const LoginPage = props => {
 
   return (
     <>
-      <h2>Login page</h2>
-      <p>You must log in to view the protected pages </p>
-      <input id="email" placeholder="email" onChange={e => {
-        setEmail(e.target.value);
-      }}></input><br />
-      <input id="password" type="password" placeholder="password" onChange={e => {
-        setPassword(e.target.value);
-      }}></input><br />
-      {/* Login web form  */}
-      <button onClick={login}>Log in</button>
-      <p>Not Registered?
-        <Link to="/signup">Sign Up!</Link></p>
+      <br /> <br />
+      <center>
+        <h1>You must log in to view the protected pages </h1>
+        <input id="email" placeholder="email" onChange={e => {
+          setEmail(e.target.value);
+        }}></input><br />
+        <input id="password" type="password" placeholder="password" onChange={e => {
+          setPassword(e.target.value);
+        }}></input><br />
+        <br />
+        <button onClick={login}>Log in</button>
+        <p>Not Registered?
+          <Link to="/signup">Sign Up!</Link></p>
+      </center>
     </>
   );
 };
