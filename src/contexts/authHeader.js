@@ -5,19 +5,21 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import Fab from "@material-ui/core/Fab";
 
 const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  appbar: {
-    // background: 'none',
-    margin: 70,
-    padding: 0,
-    width: 390,
-    fontSize: 22,
-    height: 50
-  },
+  fab: {
+    marginTop: theme.spacing(9),
+    position: "fixed",
+    top: theme.spacing(0),
+    right: theme.spacing(47),
+    width: 200,
+    height: 100,
+    fontSize: 10,
+},
   offset: theme.mixins.toolbar,
 }));
 
@@ -28,13 +30,13 @@ const BaseAuthHeader = (props) => {
 
   return (
     <>
-      <AppBar className={classes.appbar}
+      <Fab className={classes.fab}
         position="fixed" elevation={0} color='primary'>
         <Toolbar>
           {context.isAuthenticated ? (
             <>
               <p>
-                Welcome {context.email}! <button onClick={() => context.signout()}>Sign out</button>
+                Welcome {context.email}! <button onClick={() => context.signout()}>Logout</button>
               </p>
             </>
           ) : (
@@ -46,7 +48,7 @@ const BaseAuthHeader = (props) => {
             </>
           )}
         </Toolbar>
-      </AppBar>
+      </Fab>
     </>
   );
 };
