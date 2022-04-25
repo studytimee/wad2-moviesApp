@@ -40,12 +40,6 @@ export default function CelebrityCard(props) {
         <Grid container>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
-              <CalendarIcon fontSize="small" />
-              {"D.O.B "} {celebrity.birthday}
-            </Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <Typography variant="h6" component="p">
               <StarRateIcon fontSize="small" />
               {" "} {celebrity.popularity}{" "}
             </Typography>
