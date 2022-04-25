@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     right: theme.spacing(47),
     width: 200,
     height: 100,
-    fontSize: 10,
+    fontSize: 15,
 },
   offset: theme.mixins.toolbar,
 }));

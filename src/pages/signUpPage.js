@@ -41,8 +41,12 @@ const SignupPage = props => {
 
 
   return (
-    <>
+    <>      
+    <br/><br/>
       <center>
+      <br/><br/>
+        <h1> Welcome to Web Development App 2 </h1>
+        <h2> Sign Up </h2>
         <form onSubmit={handleSubmit}>
           <input value={email} placeholder="email" onChange={e => {
             setEmail(e.target.value);
