@@ -101,6 +101,34 @@ __The Movie Details Page - Similar Movies Button Storybook.__
 + [Server State Caching Demo Video](https://youtu.be/M7ARV0u_f_k).
 
 
+## Authentication.
+
+[Briefly explain the method used for supporting authentication and include any relevant screenshots (e.g. Dev tools Network tab for session keys). State which parts of the app's functionality require authentication, e.g. the Favourites feature.]
+
+__Authentication - Private Route.__
+![][require-authentication]
+> In the moivesApp both pages (favourite & WatchList) are protected.
+
+
+__Authentication - Sign Up .__
+![][signup-page]
+
+
+__Authentication - Password encrypted .__
+![][hashed-before-saved]
+> In the background the passwords are being hashed before being saved in to the database.
+
+
+__Authentication - Login .__
+![][login]
+
+
+__Authentication - Verification .__
+![][authentication]
+> Enter a known email and password and the app should authenticate using the API and get a JWT token. Now have access to both protected routes.
+
+
+
 
 
 [up-coming]:   ./images/up-coming.png
@@ -119,3 +147,10 @@ __The Movie Details Page - Similar Movies Button Storybook.__
 [CelebrityDetailPage-celebrityList]:               https://i.imgur.com/rb0Kz9i.png
 [CelebrityDetailPage-celebrityDetailsHeader]:      https://i.imgur.com/RDVj1My.png
 [movie-detail-similar-button]:                     https://i.imgur.com/N8uMeRt.png
+
+
+[require-authentication]:   https://i.imgur.com/xtd9IQg.png
+[signup-page]:              https://i.imgur.com/Hqq6NRr.png
+[hashed-before-saved]:      ./images/encrypted-password.png
+[login]:                     https://i.imgur.com/dADqOEd.png
+[authentication]:            https://i.imgur.com/eNW7xmi.png
