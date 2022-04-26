@@ -103,8 +103,6 @@ __The Movie Details Page - Similar Movies Button Storybook.__
 
 ## Authentication.
 
-[Briefly explain the method used for supporting authentication and include any relevant screenshots (e.g. Dev tools Network tab for session keys). State which parts of the app's functionality require authentication, e.g. the Favourites feature.]
-
 __Authentication - Private Route.__
 ![][require-authentication]
 > In the moivesApp both pages (favourite & WatchList) are protected.
@@ -126,6 +124,91 @@ __Authentication - Login .__
 __Authentication - Verification .__
 ![][authentication]
 > Enter a known email and password and the app should authenticate using the API and get a JWT token. Now have access to both protected routes.
+
+
+
+# Learning Material.
+
+
+### JavaScript Fundamentals - Objects
+[View Lab Code](https://github.com/studytimee/wad2-lab2-js-objects)
+
+| **JS Objects**                          | **Console Output**                        |
+| --------------------------------------- | ----------------------------------------- |
+| Start up                                |  [Click](https://i.imgur.com/ciZubKf.png) |
+| Nested Objects                          |  [Click](https://i.imgur.com/oNfL7et.png) |
+| Nested Objects Example 2                |  [Click](https://i.imgur.com/dJMJPfx.png) |
+| Dynamic Properties                      |  [Click](https://i.imgur.com/1YIJGhq.png) |
+| Arrays                                  |  [Click](https://i.imgur.com/ZLFBoKi.png) |
+| Arrays (better format)                  |  [Click](https://i.imgur.com/sCC7WlR.png) |
+| Looping/Iteration                       |  [Click](https://i.imgur.com/pgbnmGF.png) |
+| Looping/Iteration  - Key & Value pair   |  [Click](https://i.imgur.com/KwsyczI.png) |
+| Browser Tool - Console                  |  [Click](https://i.imgur.com/WDvZRFV.png) |
+| Browser Tool - Update Objects property  |  [Click](https://i.imgur.com/sqNrnNq.png) |
+
+
+
+### JavaScript Fundamentals - Functions 
+[view lab code](https://github.com/studytimee/wad2-lab2-js-functions)
+
+
+| **JS Objects**                                            | **Console Output**                       | **Code**                                                                                        |
+| --------------------------------------------------------- | -----------------------------------------| ----------------------------------------------------------------------------------------------- |
+| Start up - Web API Call  - Random User                    |  [View](https://i.imgur.com/1dVSdzM.png) |                                                                                                 |
+| Start up Lab - Web API Call - Todo                        |  [View](https://i.imgur.com/JQy7aXO.png) |                                                                                                 |
+| Exercise 1 - Used array.filter Higher Order Function      |  [View](https://i.imgur.com/sibd3EC.png) |                                                                                                 |
+| Exercise 2 - Used array.map Higher Order Function         |  [View](https://i.imgur.com/pelQwLA.png) |                                                                                                 |
+| Exercise 3 - Combine Filter and Map Higher Order Function |  [View](https://i.imgur.com/LhRfDaG.png) |                                                                                                 |
+| Exercise 4 - used arry.reduce Higher Order Function       |  [View](https://i.imgur.com/boqJSOz.png) |                                                                                                 |
+| Exercise 5 - similar to ex 3 with Reduce Higher Order Fun |  [View](https://i.imgur.com/bKAXD8t.png) | [View](https://github.com/studytimee/wad2-lab2-js-functions/blob/main/functionslab/exercise5.js)|
+| Exercise 6 - Find number of completed todo/user Reduce HOF|  [View](https://i.imgur.com/Jlwrs4I.png) | [View](https://github.com/studytimee/wad2-lab2-js-functions/blob/main/functionslab/exercise6.js)|
+| DOM API Exercise                                          
+
+
+### React JS - Basics
+[view lab code](https://github.com/studytimee/wad2-lab4-react-basic)
+
+| **JS Objects**                                            | **Console Output**                       | **Code**                                   |**Storybook Code**                               |
+| --------------------------------------------------------- | -----------------------------------------| ------------------------------------------ | ------------------------------------------ | 
+| Start up -                                                |  [View](https://i.imgur.com/pHWEVWc.png) | [View](https://i.imgur.com/Bnc4iHQ.png)    |                                            | 
+| Exercise 1 - Static Component                             |  [View](https://i.imgur.com/Jd6bkFT.png) | [View](https://i.imgur.com/NDDnNHG.png)    |                                            |    
+| Exercise 2 - Embedded Variables                           |  [View](https://i.imgur.com/DqEVZT7.png) | [View](https://i.imgur.com/Q2P8vFQ.png)     | [View](https://i.imgur.com/8EdOSHc.png)    |
+| Exercise 3 - Props                                        |  [View](https://i.imgur.com/vwzbaaC.png) | [View](https://i.imgur.com/UVpQJj7.png)    | [View](https://i.imgur.com/yGAw9By.png)    |
+| Exercise 4 - Iterations                                   |  [View](https://i.imgur.com/NELo6F8.png) | [View](https://i.imgur.com/RlC23Df.png)    | [View](https://i.imgur.com/MA0VZvD.png)    |
+
+
+
+
+### ReactJS -  React Create React App Tool
+[view lab code](https://github.com/studytimee/wad2-lab4-react-cra-tool)
+This lab introduces the create-react-app (CRA) tool. While Storybook is a tool for developing individual components, CRA is for developing a complete application (app).
+
+**npx create-react-app course-app**
+**cd course-app**
+
+| **Create a React Application**  |  **UI/Console Output**                   | **Stateless Component**                                    | **Stateful Component**                                     |     **Component Hierarchy**                              | 
+| --------------------------------| -----------------------------------------| --------------------------------------------------------   | --------------------------------------------------------   | -------------------------------------------------------- |
+| 1-Start up                      |  [View](https://i.imgur.com/0BsKVhk.png) |                                                            |                                                            |                                                          |
+| 2-Components                    |                                          |  [View Course Component](https://i.imgur.com/pGN3EHM.png)  |                                                            |                                                          |
+|                                 |                                          |  [View Module Component](https://i.imgur.com/IjjxYvi.png)  |                                                            |                                                          |
+| 3-Assemble the App component    |  [View](https://i.imgur.com/NvDUD3P.png) |                                                            | [View Stateful Component](https://i.imgur.com/MZsFZBc.png)  | [View](https://i.imgur.com/p3SD58l.png)                 |
+| 4-The Bootstrap CSS Library     |  [View](https://i.imgur.com/ErBtvgo.png) |                                                            |                                                            |                                                          |
+| 5-Live reloading                |                                          |                                                            |                                                            |                                                          |
+| 6-Building a production App     |  [View](https://i.imgur.com/lPJ9mj3.png) |                                                            |                                                            |                                                          |
+| 7-Material UI                   |  [View](https://i.imgur.com/FBJfjO2.png) |                                                            |                                                            |                                                          |
+
+
+### Lab 5 -  MoviesApp Part - 1 
+[view lab code](https://github.com/studytimee/wad2-lab5-moviesApp-part-1)
+
+### Lab 6 -  MoviesApp Part - 2 
+[view lab code](https://github.com/studytimee/wad2-lab6-moviesApp-part-2)
+
+### Lab 8 -  MoviesApp Part - 3 
+[view lab code](https://github.com/studytimee/wad2-lab6-moviesApp-part-3)
+
+### Lab 9 -  MoviesApp Part - 4 
+[view lab code](https://github.com/studytimee/wad2-lab9-moviesApp-part-4)
 
 
 
