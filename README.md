@@ -68,6 +68,33 @@ __Show the full detail of similar movies feature.__
 __URL:__ /movies/{new-matched-movie_id}
 
 
+## Storybook.
+
+__The Celebrity Page - Celebrity Card - Default Storybook.__
+![][CelebrityPage-celebrityCard-default]
+
+
+__The Celebrity Page - Celebrity Card - Exception Storybook.__
+![][CelebrityPage-celebrityCard-default-exception]
+
+
+__The Celebrity Detail Page - Celebrity Detail Storybook.__
+![][CelebrityDetailPage-celebrityDetails]
+
+
+__The Celebrity Detail Page - Celebrity List Storybook.__
+![][CelebrityDetailPage-celebrityList]
+
+
+__The Celebrity Detail Page - Celebrity Header Storybook.__
+![][CelebrityDetailPage-celebrityDetailsHeader]
+
+
+__The Movie Details Page - Similar Movies Button Storybook.__
+![][movie-detail-similar-button]
+
+
+
 
 ### Server state caching.
 
@@ -84,3 +111,11 @@ __URL:__ /movies/{new-matched-movie_id}
 [show-similar-button]:   ./images/show-similar-button.png
 [list-of-similar-movies]:   ./images/list-of-similar-movies.png
 [full-detail-of-similar-movies]:   ./images/full-detail-of-similar-movies.png
+
+
+[CelebrityPage-celebrityCard-default]:             https://i.imgur.com/H2R9Pvv.png
+[CelebrityPage-celebrityCard-default-exception]:   https://i.imgur.com/qeSPwDW.png
+[CelebrityDetailPage-celebrityDetails]:            https://i.imgur.com/xCjCTRH.png
+[CelebrityDetailPage-celebrityList]:               https://i.imgur.com/rb0Kz9i.png
+[CelebrityDetailPage-celebrityDetailsHeader]:      https://i.imgur.com/RDVj1My.png
+[movie-detail-similar-button]:                     https://i.imgur.com/N8uMeRt.png
