@@ -20,7 +20,7 @@ import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./privateRoute/privateRoute";
 import AuthContext from "./contexts/authContext";
-import AuthHeader from "./contexts/authHeader";
+import AuthHeader from "./components/headerAuth";
 
 const queryClient = new QueryClient({
   defaultOptions: {
