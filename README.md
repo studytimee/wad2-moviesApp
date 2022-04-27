@@ -103,7 +103,21 @@ __The Movie Details Page - Similar Movies Button Storybook.__
 
 ## Authentication.
 
+__Authentication - API Integration.__
+![][API-integration]
+>The client App provides a mechanism for working with an server API's.
+
+>The Client app makes an API request to localhost:3000, the Webpack development server. The development server then proxies that request to the API server.
+
+#### Proxy Server
+>To have the React development server proxy our API requests to our Express API server, we need to add the following to the package.json file for the React Application
+
+>This proxy server forward any request that not present in the client resource to the Express API listening on port 8080.
+
 __Authentication - Private Route.__
+
+![][private-route]
+
 ![][require-authentication]
 > In the moivesApp both pages (favourite & WatchList) are protected.
 
@@ -232,6 +246,8 @@ This lab introduces the create-react-app (CRA) tool. While Storybook is a tool f
 [movie-detail-similar-button]:                     https://i.imgur.com/N8uMeRt.png
 
 
+[API-integration]:          ./images/API_Integration-5.png
+[private-route]:            ./images/private-route.png
 [require-authentication]:   https://i.imgur.com/xtd9IQg.png
 [signup-page]:              https://i.imgur.com/Hqq6NRr.png
 [hashed-before-saved]:      ./images/encrypted-password.png
