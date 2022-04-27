@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     fab: {
         marginTop: theme.spacing(10),
         position: "fixed",
-        top: theme.spacing(1),
+        top: theme.spacing(10),
         right: theme.spacing(4),
     },
     offset: theme.mixins.toolbar,
